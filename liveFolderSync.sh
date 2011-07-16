@@ -1,5 +1,8 @@
 #!/bin/sh
 # Simple script to facilitate a Master/Slave distributed file system for applications such as web servers.
+# 1. Set up SSH key authentication to the slave server from the master server
+# 2. Invoke this script like:
+# nohup ./liveFolderSync.sh &
 
 set -e
 set -u
