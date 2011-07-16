@@ -1,12 +1,2 @@
-#!/bin/sh
-#Base directory, eg /var/www/uploads
-BASEDIR=""
-
-#Slave server IP address 
-TARGETSERVER=""
-
-#rsync command and parameters
-RSYNC="rsync -av --delete -e ssh"
-
 #User to run rsync and SSH from (User holding the SSH key)
 USER="root"

@@ -1,0 +1,9 @@
+#!/bin/sh
+#Base directory, eg /var/www/uploads
+BASEDIR=""
+
+#Slave server IP address 
+TARGETSERVER=""
+
+#rsync command and parameters
+RSYNC="rsync -av --delete -e ssh"

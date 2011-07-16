@@ -7,7 +7,9 @@
 set -e
 set -u
 
-RSYNC="rsync -av --delete -e ssh"
+source /etc/liveFolderSync
+
+RSYNC="rsync -a --delete -e ssh"
 
 #Logger Function
 log() { logger -p daemon.info -t "liveFolderSync" "$@"; echo "$@"; }
