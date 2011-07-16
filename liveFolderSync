@@ -7,8 +7,6 @@
 set -e
 set -u
 
-BASEDIR="$1"
-TARGETSERVER="$2"
 RSYNC="rsync -av --delete -e ssh"
 
 #Logger Function
