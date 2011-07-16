@@ -2,8 +2,14 @@
 Does what it says on the tin. Keeps 2 servers in sync, master/slave style, in real time.
 As files are write-closed, moved, deleted or created that change is picked up by inotify and sync'd to your target server using rsync over ssh.
 
-==Setting up liveFolderSync==
+==Install==
 The following instructions apply to Ubuntu, I've not tested elsewhere. 
+
+===Auto Install===
+# Checkout the latest copy of liveFolderSync to somewhere on your server, eg /usr/local/liveFolderSync
+# Run install.sh
+
+===Manual Install===
 # The watcher uses inotifywatch, which on Ubuntu is supplied by inotify-tools, so instal that via apt-get
 # Checkout the latest copy of liveFolderSync to somewhere on your server, eg /usr/local/liveFolderSync
 # Install the files using symlink to their various homes
@@ -11,6 +17,8 @@ The following instructions apply to Ubuntu, I've not tested elsewhere.
 ## Symlink /usr/local/defaults to /etc/defaults/liveFolderSync
 ## Symlink /usr/local/init to /etc/init.d/liveFolderSync
 ## Symlink /usr/local/etc to /etc/liveFolderSync
+
+==Configure and Start==
 # Configure your user, base path and destination server in /etc/defaults/liveFolderSync (Be sure the user you use has read permission on the basedir and has a shared SSH key between the servers)
 # Start the daemon with /etc/init.d/liveFolderSync
 # You can run `tail -f /var/log/daemon.log | grep liveFolderSync` to watch activity
