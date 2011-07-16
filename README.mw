@@ -1,0 +1,11 @@
+==Setting up liveFolderSync==
+The following instructions apply to Ubuntu, I've not tested elsewhere. 
+# Checkout the latest copy of liveFolderSync to somewhere on your server, eg /usr/local/liveFolderSync
+# Symlink /usr/local/liveFolderSync to /usr/sbin/liveFolderSync
+# Symlink /usr/local/defaults to /etc/defaults/liveFolderSync
+# Symlink /usr/local/init to /etc/init.d/liveFolderSync
+# Configure your user, base path and destination server in /etc/defaults/liveFolderSync
+## Be sure the user you use has read permission on the basedir and has a shared SSH key between the servers
+# Start the daemon with /etc/init.d/liveFolderSync
+# ?
+# Profit

@@ -7,3 +7,6 @@ TARGETSERVER=""
 
 #rsync command and parameters
 RSYNC="rsync -av --delete -e ssh"
+
+#User to run rsync and SSH from (User holding the SSH key)
+USER="root"
